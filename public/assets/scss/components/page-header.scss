@@ -1,0 +1,34 @@
+//
+// Page Header 
+// _________________________
+.page-header {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #333;
+    margin-bottom: 40px;
+}
+
+.header-content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    > .item {
+        display: flex;
+    }
+
+    > .item > .link {
+        font-size: 18px;
+        padding: 20px;
+        transition: color 200ms;
+
+        &:hover {
+            color: #50FA7B;
+        }
+    }
+}

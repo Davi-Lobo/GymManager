@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+
+        {% block head %}
+        <title>Gym Manager</title>
+        {% endblock %}
+
+        <meta charset="utf-8">
+        <meta name="author" content="Davi Lobo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="assets/css/styles-min.css">
+
+    </head> 
+
+    <body>
+        <header class="page-header">
+            <div class="header-content">
+                <div class="nav-section">
+                    <nav class="navigation">
+                        <ul class="nav-list">
+                            <li class="item"><a class="link" href="/">Instructors</a></li>
+                            <li class="item"><a class="link" href="/videos">Members</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        {% block content %}{% endblock %}
+
+    </body>
+</html>
