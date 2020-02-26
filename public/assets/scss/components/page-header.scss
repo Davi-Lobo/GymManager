@@ -2,8 +2,7 @@
 // Page Header 
 // _________________________
 .page-header {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #333;
+    background-color: #FFF; 
     margin-bottom: 40px;
 }
 
@@ -25,10 +24,26 @@
     > .item > .link {
         font-size: 18px;
         padding: 20px;
+        position: relative;
         transition: color 200ms;
 
         &:hover {
-            color: #50FA7B;
+            color: #7159C1;
+
+            &::after {
+                width: calc(100% - 40px);
+            }
+        }
+
+        &::after {
+            background-color: #7159C1;
+            content: '';
+            display: block;
+            height: 1.5px;
+            left: 20px;
+            position: absolute;
+            transition: width 200ms ease-in-out;
+            width: 0;
         }
     }
 }
