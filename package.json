@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all -p nodemon bsync",
     "nodemon": "nodemon server.js",
-    "bsync": "browser-sync start http://localhoost:5000 --files 'public, views'"
+    "bsync": "browser-sync start --proxy http://localhost:5000 --files 'public,views'"
   },
   "author": "Davi Lobo",
   "license": "MIT",
