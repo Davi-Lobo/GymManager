@@ -1,0 +1,16 @@
+//
+// Info box
+// _________________________
+
+.info-box {
+    padding: 20px;
+
+    > .item {
+        border-bottom: 2px solid #FAFAFA;
+        padding: 10px 0;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+}
