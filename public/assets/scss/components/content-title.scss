@@ -1,0 +1,16 @@
+//
+// Content Title
+// _________________________
+
+.content-title {
+    margin-bottom: 20px;
+
+    > .title {
+        color: #7159C1;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+}
