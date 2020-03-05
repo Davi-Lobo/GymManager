@@ -2,42 +2,81 @@
 
 {%block content%}
     <div class="section-container _grid">
-        <div class="form-container">
+        <form class="info-container" method="POST" action="/instructors">
             <div class="image-box">
                 <img src="https://source.unsplash.com/collection/3465564/600x500" alt="Workout Image">
             </div>
 
             <div class="info-box">
                 <div class="content-title">
-                    <h3 class="title">Detalhes</h3>
+                    <h3 class="title">Criar novo instrutor</h3>
+                </div>
+
+                 <div class="item">
+                    <label for="avatarUrl" class="label">Nome</label>
+                    <input 
+                        id="avatarUrl" 
+                        type="url" 
+                        class="info" 
+                        name="avatar_url"
+                        placeholder="Insira a url da imagem"
+                    />
                 </div>
 
                 <div class="item">
-                    <label class="label">Nome</label>
-                    <span class="info">Claúdio Xablau</span>
+                    <label for="instructorName" class="label">Nome</label>
+                    <input id="instructorName" 
+                        type="text" 
+                        class="info" 
+                        name="name"
+                        placeholder="Nome do instrutor"
+                    />
                 </div>
 
                 <div class="item">
-                    <label class="label">Idade</label>
-                    <span class="info">23</span>
+                    <label for="instructorBirth" class="label">Data de nascimento</label>
+                    <input 
+                        id="instructorBirth" 
+                        type="date" 
+                        class="info"
+                        name="birth"
+                    />
                 </div>
 
-                <div class="item">
+                <div class="item -flex">
                     <label class="label">Sexo</label>
-                    <span class="info">Masculino</span>
+
+                    <span class="info -highlighted -flex">
+                        <input 
+                            type="radio" 
+                            name="gender"
+                            value="M"
+                            checked
+                        />
+                        Masculino
+                    </span>
+                    <span class="info -highlighted -flex">
+                        <input 
+                            type="radio" 
+                            name="gender"
+                            value="F"
+                        />
+                        Feminino
+                    </span>
                 </div>
 
                 <div class="item">
-                    <label class="label">Acompanhamento</label>
-                    <span class="info -highlighted">Musculação</span>
-                    <span class="info -highlighted">Crossfit</span>
+                    <label for="instructorSkill" class="label">Area de Atuação</label>
+                    <input id="instructorSkill" 
+                        type="text" 
+                        class="info" 
+                        name="skill"
+                        placeholder="Insira as áreas do instrutor"
+                    />
                 </div>
 
-                <div class="item">
-                    <label class="label">Desde</label>
-                    <span class="info">10/01/2018</span>
-                </div>
+                <button type="submit" class="submit-button"><span>Salvar</span></button>
             </div>
-        </div>
+        </form>
     </div>
 {%endblock content%}

@@ -12,6 +12,22 @@
         &:last-child {
             border: 0;
         }
+
+        &.-flex {
+            display: flex;
+            flex-wrap: wrap;
+
+            > .label {
+                width: 100%;
+            }
+
+            > .info {
+                &.-highlighted  {
+                    align-items: center;
+                    display: flex;
+                }
+            }
+        }
     }
 
     > .item > .label {
