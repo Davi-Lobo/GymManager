@@ -17,7 +17,7 @@ exports.post = function(req, res) {
 
     birth = Date.parse(req.body.birth);
     const created_at = Date.now();
-    const id = Number(Object.keys(data.instructors).length + 1);
+    const id = Number(data.instructors.length + 1);
 
     data.instructors.push({
         id,

@@ -3,38 +3,20 @@
     {
       "id": 1,
       "avatar_url": "http://www.google.com.br",
-      "name": "Davi Lobo 2",
+      "name": "Davi Lobo 3 kkk",
       "birth": 979257600000,
       "gender": "M",
       "skills": "Musculação",
-      "created_at": 1583727834601
+      "created_at": 1583728526364
     },
     {
       "id": 2,
-      "avatar_url": "http://www.google.com.br",
-      "name": "Davi Lobo 1",
-      "birth": 979257600000,
-      "gender": "M",
-      "skills": "Musculação",
-      "created_at": 1583727844415
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://www.google.com.br",
-      "name": "Davi Lobo 3",
-      "birth": 979257600000,
-      "gender": "M",
-      "skills": "Musculação",
-      "created_at": 1583727851641
-    },
-    {
-      "id": 4,
       "avatar_url": "http://www.google.com.br",
       "name": "Davi Lobo 3 kkk",
       "birth": 979257600000,
       "gender": "M",
       "skills": "Musculação",
-      "created_at": 1583727855353
+      "created_at": 1583728543148
     }
   ]
 }
