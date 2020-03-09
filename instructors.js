@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 // Create
 exports.post = function(req, res) {
 
@@ -9,7 +11,14 @@ exports.post = function(req, res) {
         }
     }
 
-    return res.send(req.body);
+    fs.writeFile("data/data.json", JSON.stringify(req.body), function(err){
+        if (err) {
+            return res.send("Write file error");
+        }
+
+        return res.redirect("/instructors");
+    });
+
 };
 
 
