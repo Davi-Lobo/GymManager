@@ -1,0 +1,18 @@
+{
+  "instructors": [
+    {
+      "avatar_url": "http://www.google.com.br",
+      "name": "Davi Lobo",
+      "birth": "2001-01-12",
+      "gender": "M",
+      "skills": "Musculação"
+    },
+    {
+      "avatar_url": "http://www.google.com.br",
+      "name": "Davi Lobo 2",
+      "birth": "2001-01-12",
+      "gender": "M",
+      "skills": "Musculação"
+    }
+  ]
+}

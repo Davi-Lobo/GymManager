@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+const data = require('./data/data.json');
+
 // Create
 exports.post = function(req, res) {
 
@@ -11,7 +13,17 @@ exports.post = function(req, res) {
         }
     }
 
-    fs.writeFile("data/data.json", JSON.stringify(req.body), function(err){
+    data.instructors.push(req.body);
+
+    const dataDir = './data';
+
+    if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir);
+    }
+
+
+    fs.writeFile("data/data.json", JSON.stringify(data, null, 2), function(err){
+
         if (err) {
             return res.send("Write file error");
         }
