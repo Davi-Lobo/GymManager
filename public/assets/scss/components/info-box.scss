@@ -55,4 +55,19 @@
             font-weight: 700;
         }
     }
+
+    &.-form {
+        > .item {
+            border: 0;
+        }
+
+        > .item > .label {
+            font-weight: 700;
+        }
+
+        > .item > .info {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
 }

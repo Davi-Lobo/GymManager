@@ -13,6 +13,10 @@ routes.get('/instructors/create', function(req, res) {
     return res.render('instructors/create');
 });
 
+routes.post('/instructors', function(req, res) {
+    return res.send('recebeu');
+});
+
 routes.get('/members', function(req, res) {
     return res.send('members');
 });

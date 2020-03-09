@@ -2,7 +2,7 @@
 // General
 // _________________________
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
 
 * {
     box-sizing: border-box;
@@ -41,6 +41,45 @@ a {
     text-decoration: none;
 }
 
+input {
+    border-radius: 5px;
+    border: 2px solid #EAEAEA;
+    font-family: 'Roboto';
+    outline: none;
+    padding: 5px;
+    transition: border 0.5s ease-in;
+
+    &:focus {
+        border-color: #7159c1;
+    }
+
+    &::placeholder {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+input[type="text"],
+input[type="url"],
+input[type="date"] {
+    width: 100%;
+}
+
 input[type="radio"] {
     margin: 0 5px 0 0;
+}
+
+button[type="submit"] {
+    background-color: #7159c1;
+    border-radius: 5px;
+    border: 0;
+    color: #FFF;
+    font-weight: 700;
+    height: 40px;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover {
+        background-color: #553ea2;
+    }
 }
