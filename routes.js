@@ -14,7 +14,7 @@ routes.get('/instructors/create', function(req, res) {
 });
 
 routes.post('/instructors', function(req, res) {
-    return res.send('recebeu');
+    return res.send(req.body);
 });
 
 routes.get('/members', function(req, res) {
