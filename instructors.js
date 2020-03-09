@@ -13,7 +13,21 @@ exports.post = function(req, res) {
         }
     }
 
-    data.instructors.push(req.body);
+    let { avatar_url, name, birth, gender, skills } = req.body;
+
+    birth = Date.parse(req.body.birth);
+    const created_at = Date.now();
+    const id = Number(Object.keys(data.instructors).length + 1);
+
+    data.instructors.push({
+        id,
+        avatar_url,
+        name,
+        birth,
+        gender,
+        skills,
+        created_at
+    });
 
     const dataDir = './data';
 
