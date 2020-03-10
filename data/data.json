@@ -3,19 +3,19 @@
     {
       "id": 1,
       "avatar_url": "http://www.google.com.br",
-      "name": "Davi Lobo 3 kkk",
+      "name": "Davi Lobo",
       "birth": 979257600000,
-      "gender": "M",
-      "skills": "Musculação",
+      "gender": "F",
+      "skills": "Musculação, Crossfit",
       "created_at": 1583728526364
     },
     {
       "id": 2,
       "avatar_url": "http://www.google.com.br",
-      "name": "Davi Lobo 3 kkk",
+      "name": "Claúdio",
       "birth": 979257600000,
       "gender": "M",
-      "skills": "Musculação",
+      "skills": "Musculação, Dança",
       "created_at": 1583728543148
     }
   ]

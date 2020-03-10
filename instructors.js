@@ -2,6 +2,35 @@ const fs = require('fs');
 
 const data = require('./data/data.json');
 
+
+// Show
+exports.show = function(req,res) {
+
+    const { id } = req.params;
+
+    const findInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id;
+    })
+
+
+    if(!findInstructor) {
+        return res.send("Instructor not found");
+    }
+
+    const instructor = {
+        ...findInstructor,
+        age: "",
+        skills: findInstructor.skills.split(","),
+        created_at: ""
+    }
+
+    instructor.gender = instructor.gender=="M" ? "Masculino" : "Feminino";
+
+    return res.render("instructors/instructor", {instructor});
+
+}
+
+
 // Create
 exports.post = function(req, res) {
 
@@ -46,8 +75,3 @@ exports.post = function(req, res) {
     });
 
 };
-
-
-// Update
-
-// Delete

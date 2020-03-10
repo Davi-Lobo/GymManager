@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{%block content%}
+    <div class="section-container _grid">
+        <div class="info-container">
+            <div class="image-box">
+                <img src="{{instructor.avatar_url}}" alt="Workout Image">
+            </div>
+
+            <div class="info-box">
+                <div class="content-title">
+                    <h3 class="title">Detalhes</h3>
+                </div>
+
+                <div class="item">
+                    <label class="label">Nome</label>
+                    <span class="info">{{instructor.name}}</span>
+                </div>
+
+                <div class="item">
+                    <label class="label">Idade</label>
+                    <span class="info">{{instructor.age}}</span>
+                </div>
+
+                <div class="item">
+                    <label class="label">Sexo</label>
+                    <span class="info">{{instructor.gender}}</span>
+                </div>
+
+                <div class="item">
+                    <label class="label">Acompanhamento</label>
+
+                    {% for skill in instructor.skills %}
+                        <span class="info -highlighted">{{skill}}</span>
+                    {% endfor %}
+                </div>
+
+                <div class="item">
+                    <label class="label">Desde</label>
+                    <span class="info">{{instructor.created_at}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock content%}
