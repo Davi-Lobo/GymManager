@@ -77,3 +77,20 @@ exports.post = function(req, res) {
     });
 
 };
+
+
+// Edit
+exports.edit = function(req, res) {
+    const { id } = req.params;
+
+    const findInstructor = data.instructors.find(function(instructor) {
+        return instructor.id == id;
+    })
+
+
+    if(!findInstructor) {
+        return res.send("Instructor not found");
+    }
+    
+    return res.render('instructors/edit', { instructor: findInstructor });
+};

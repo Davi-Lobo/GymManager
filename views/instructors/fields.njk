@@ -6,6 +6,7 @@
         class="info" 
         name="avatar_url"
         placeholder="http://"
+        value="{{instructor.avatar_url}}"
     />
 </div>
 
@@ -16,6 +17,7 @@
         class="info" 
         name="name"
         placeholder="Nome do instrutor"
+        value="{{instructor.name}}"
     />
 </div>
 
@@ -26,6 +28,7 @@
         type="date" 
         class="info"
         name="birth"
+        value="instructor.birth"
     />
 </div>
 
@@ -38,7 +41,9 @@
             type="radio" 
             name="gender"
             value="M"
-            checked
+           {% if instructor.gender == 'M' %}
+           checked
+           {% endif %}
         />
         Masculino
     </label>
@@ -48,6 +53,9 @@
             type="radio" 
             name="gender"
             value="F"
+            {% if instructor.gender == 'F' %}
+           checked
+           {% endif %}
         />
         Feminino
     </label>
@@ -60,5 +68,6 @@
         class="info" 
         name="skills"
         placeholder="Insira as áreas do instrutor"
+        value="{{instructor.skills}}"
     />
 </div>
