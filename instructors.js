@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const data = require('./data/data.json');
 
-const getAge = require('./utils/getAge');
+const { getAge, parseDate } = require('./utils/dates');
 
 
 // Show
@@ -24,7 +24,7 @@ exports.show = function(req,res) {
         age: getAge(findInstructor.birth),
         skills: findInstructor.skills.split(","),
         created_at: new Intl.DateTimeFormat("pt-BR").format(findInstructor.created_at)
-    }
+    };
 
     instructor.gender = instructor.gender=="M" ? "Masculino" : "Feminino";
 
@@ -87,10 +87,15 @@ exports.edit = function(req, res) {
         return instructor.id == id;
     })
 
-
     if(!findInstructor) {
         return res.send("Instructor not found");
     }
+
+
+    const instructor = {
+        ...findInstructor,
+        birth: parseDate(findInstructor.birth)
+    };
     
-    return res.render('instructors/edit', { instructor: findInstructor });
+    return res.render('instructors/edit', { instructor });
 };
