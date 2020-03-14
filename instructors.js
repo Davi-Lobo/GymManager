@@ -23,7 +23,7 @@ exports.show = function(req,res) {
         ...findInstructor,
         age: getAge(findInstructor.birth),
         skills: findInstructor.skills.split(","),
-        created_at: ""
+        created_at: new Intl.DateTimeFormat("pt-BR").format(findInstructor.created_at)
     }
 
     instructor.gender = instructor.gender=="M" ? "Masculino" : "Feminino";
