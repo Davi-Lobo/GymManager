@@ -69,13 +69,17 @@ input[type="radio"] {
     margin: 0 5px 0 0;
 }
 
-button[type="submit"] {
+button,
+.button {
+    align-items: center;
     background-color: #7159c1;
     border-radius: 5px;
     border: 0;
     color: #FFF;
+    display: flex;
     font-weight: 700;
     height: 40px;
+    justify-content: center;
     text-transform: uppercase;
     width: 100%;
 
