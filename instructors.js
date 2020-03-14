@@ -2,6 +2,8 @@ const fs = require('fs');
 
 const data = require('./data/data.json');
 
+const getAge = require('./utils/getAge');
+
 
 // Show
 exports.show = function(req,res) {
@@ -17,28 +19,12 @@ exports.show = function(req,res) {
         return res.send("Instructor not found");
     }
 
-    function getAge(timestamp) {
-        const today = new Date();
-        const birthDate = new Date(timestamp);
-
-        let age = today.getFullYear() - birthDate.getFullYear();
-        const month = today.getMonth() - birthDate.getMonth();
-
-        if (month < 0 || month == 0 && today.getDate() <= birthDate.getDate()) {
-            age = age - 1;
-        }
-
-        return age;
-    }
-
     const instructor = {
         ...findInstructor,
         age: getAge(findInstructor.birth),
         skills: findInstructor.skills.split(","),
         created_at: ""
     }
-
-    console.log(instructor.age);
 
     instructor.gender = instructor.gender=="M" ? "Masculino" : "Feminino";
 
