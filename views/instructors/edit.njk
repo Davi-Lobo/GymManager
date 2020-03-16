@@ -2,26 +2,40 @@
 
 {%block content%}
     <div class="section-container _grid">
-        <form class="info-container" method="POST" action="/instructors?_method=PUT">
+        <div class="form-block">
             <div class="image-box">
                 <img src="https://source.unsplash.com/collection/3465564/600x500" alt="Workout Image">
             </div>
 
-            <div class="info-box -form">
-                <div class="content-title">
-                    <h3 class="title">Editar informações</h3>
-                </div>
+            <div class="container">
+                <form class="form-container" method="POST" action="/instructors?_method=PUT">
+                    <div class="info-box -form">
+                        <div class="content-title">
+                            <h3 class="title">Editar informações</h3>
+                        </div>
 
-                {% include 'instructors/fields.njk' %}
+                        {% include 'instructors/fields.njk' %}
 
-                <input 
-                    type="hidden" 
-                    name="id" 
-                    value={{instructor.id}}
-                > 
+                        <input 
+                            type="hidden" 
+                            name="id" 
+                            value={{instructor.id}}
+                        > 
 
-                <button type="submit" class="button"><span>Salvar</span></button>
+                        <button type="submit" class="button"><span>Salvar</span></button>
+                    </div>
+                </form>
+
+                <form class="form-container -delete" method="POST" action="/instructors?_method=PUT">
+                    <input 
+                        type="hidden" 
+                        name="id" 
+                        value={{instructor.id}}
+                    > 
+
+                    <button type="submit" class="button -delete"><span>Deletar</span></button>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 {%endblock content%}

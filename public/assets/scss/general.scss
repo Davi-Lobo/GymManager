@@ -86,4 +86,12 @@ button,
     &:hover {
         background-color: #553ea2;
     }
+
+    &.-delete {
+        background-color: #e02b27;
+
+        &:hover {
+            background-color: #b92320;
+        }
+    }
 }
