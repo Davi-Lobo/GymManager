@@ -23,6 +23,8 @@ routes.get('/instructors/:id/edit', instructors.edit);
 
 routes.put("/instructors", instructors.put);
 
+routes.delete("/instructors", instructors.delete);
+
 routes.get('/members', function(req, res) {
     return res.send('members'); 
 });
