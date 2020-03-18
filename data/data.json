@@ -1,7 +1,7 @@
 {
   "instructors": [
     {
-      "id": "1",
+      "id": 1,
       "avatar_url": "https://source.unsplash.com/collection/3465564/600x500",
       "name": "Davi Lobo Gomes Dos Santos",
       "birth": 979257600000,
@@ -31,7 +31,7 @@
       "id": 4,
       "avatar_url": "http://www.google.com.br",
       "name": "Karla Rocha",
-      "birth": 922320000000,  
+      "birth": 922320000000,
       "gender": "F",
       "skills": "Krav Maga",
       "created_at": 1584159357103
