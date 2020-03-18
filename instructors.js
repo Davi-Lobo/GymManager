@@ -4,6 +4,11 @@ const data = require('./data/data.json');
 
 const { getAge, parseDate } = require('./utils/dates');
 
+// Index
+exports.index = function(req, res) {
+    return res.render('instructors/index', { instructors: data.instructors });
+};
+
 
 // Show
 exports.show = function(req,res) {
@@ -30,7 +35,7 @@ exports.show = function(req,res) {
 
     return res.render("instructors/instructor", { instructor });
 
-}
+};
 
 
 // Create
@@ -134,7 +139,7 @@ exports.put = function(req, res) {
 
         return res.redirect(`/instructors/${id}`);
     });
-}
+};
 
 
 // Delete
@@ -154,4 +159,4 @@ exports.delete = function(req, res) {
 
         return res.redirect("/instructors");
     });
-}
+};

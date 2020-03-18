@@ -2,6 +2,27 @@
 
 {%block content%}
     <div class="section-container _grid">
+
+        <div class="instructors-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Instrutor</th>
+                        <th>Atendimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for instructor in instructors %}
+                        <tr>
+                            <td>{{instructor.name}}</td>
+                            <td>{{instructor.skills}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     
-    <a href="instructors/create">Novo instrutor</a>
+        <a href="instructors/create">Novo instrutor</a>
+
+    </div>
 {%endblock content%}
