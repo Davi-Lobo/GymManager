@@ -17,7 +17,10 @@
                 <tbody>
                     {% for instructor in instructors %}
                         <tr>
-                            <td>{{instructor.name}}</td>
+                            <td class="instructor-cell">
+                                <img class="avatar" src="{{instructor.avatar_url}}" alt="Instructor Avatar" width="80" height="80"/>
+                                <span class="name">{{instructor.name}}</span>
+                            </td>
                             <td>{{instructor.skills}}</td>
                             <td>
                                 <a href="/instructors/{{instructor.id}}">Ver</a>

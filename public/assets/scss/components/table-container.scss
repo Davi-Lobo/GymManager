@@ -16,3 +16,12 @@
         border-bottom: none;
     }
 }
+
+.instructor-cell {
+    display: flex;
+    align-items: center;
+
+    > .name {
+        padding-left: 20px;
+    }
+}
