@@ -8,7 +8,7 @@
 
             <table class="table-container">
                 <thead>
-                    <tr>
+                    <tr class="titles">
                         <th>Instrutor</th>
                         <th>Atendimento</th>
                         <th>Ação</th>
@@ -23,7 +23,7 @@
                             </td>
                             <td>{{instructor.skills}}</td>
                             <td>
-                                <a href="/instructors/{{instructor.id}}">Ver</a>
+                                <a class="button" href="/instructors/{{instructor.id}}"><span>Ver</span></a>
                             </td>
                         </tr>
                     {% endfor %}
