@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+
+{%block content%}
+    <div class="_grid">
+        <div class="form-block">
+            <div class="image-box">
+                <img src="https://source.unsplash.com/collection/3465564/600x500" alt="Workout Image">
+            </div>
+
+            <div class="container">
+                <form class="form-container" method="POST" action="/members?_method=PUT">
+                    <div class="info-box -form">
+                        <div class="content-title">
+                            <h3 class="title">Editar informações</h3>
+                        </div>
+
+                        {% include 'members/fields.njk' %}
+
+                        <input 
+                            type="hidden" 
+                            name="id" 
+                            value={{member.id}}
+                        > 
+
+                        <button type="submit" class="button"><span>Salvar</span></button>
+                    </div>
+                </form>
+
+                <form class="form-container -delete" method="POST" action="/members?_method=DELETE">
+                    <input 
+                        type="hidden" 
+                        name="id" 
+                        value={{member.id}}
+                    > 
+
+                    <button type="submit" class="button -delete"><span>Deletar</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+{%endblock content%}

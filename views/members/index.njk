@@ -4,7 +4,7 @@
     <div class="_grid">
 
         <div class="section-container">
-            <a href="instructors/create">Novo instrutor</a>
+            <a href="members/create">Novo membro</a>
 
             <table class="table-container">
                 <thead>
@@ -15,15 +15,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for instructor in instructors %}
+                    {% for member in members %}
                         <tr>
                             <td class="user-cell">
-                                <img class="avatar" src="{{instructor.avatar_url}}" alt="Instructor Avatar" width="80" height="80"/>
-                                <span class="name">{{instructor.name}}</span>
+                                <img class="avatar" src="{{member.avatar_url}}" alt="Instructor Avatar" width="80" height="80"/>
+                                <span class="name">{{member.name}}</span>
                             </td>
-                            <td>{{instructor.skills}}</td>
+                            <td>{{member.skills}}</td>
                             <td>
-                                <a class="button" href="/instructors/{{instructor.id}}"><span>Ver</span></a>
+                                <a class="button" href="/members/{{member.id}}"><span>Ver</span></a>
                             </td>
                         </tr>
                     {% endfor %}

@@ -1,0 +1,73 @@
+<div class="item">
+    <label for="avatarUrl" class="label">Avatar URL</label>
+    <input 
+        id="avatarUrl" 
+        type="url" 
+        class="info" 
+        name="avatar_url"
+        placeholder="http://"
+        value="{{member.avatar_url}}"
+    />
+</div>
+
+<div class="item">
+    <label for="memberName" class="label">Nome</label>
+    <input id="memberName" 
+        type="text" 
+        class="info" 
+        name="name"
+        placeholder="Nome do instrutor"
+        value="{{member.name}}"
+    />
+</div>
+
+<div class="item">
+    <label for="memberBirth" class="label">Data de nascimento</label>
+    <input 
+        id="memberBirth" 
+        type="date" 
+        class="info"
+        name="birth"
+        value="{{member.birth}}"
+    />
+</div>
+
+<div class="item -flex">
+    <span class="label">Sexo</span>
+
+    <label for="male" class="info -highlighted -flex">
+        <input
+            id="male" 
+            type="radio" 
+            name="gender"
+            value="M"
+           {% if member.gender == 'M' %}
+           checked
+           {% endif %}
+        />
+        Masculino
+    </label>
+    <label for="female" class="info -highlighted -flex">
+        <input
+            id="female" 
+            type="radio" 
+            name="gender"
+            value="F"
+            {% if member.gender == 'F' %}
+           checked
+           {% endif %}
+        />
+        Feminino
+    </label>
+</div>
+
+<div class="item">
+    <label for="memberSkill" class="label">Area de Atuação</label>
+    <input id="memberSkill" 
+        type="text" 
+        class="info" 
+        name="skills"
+        placeholder="Insira as áreas do instrutor"
+        value="{{member.skills}}"
+    />
+</div>
