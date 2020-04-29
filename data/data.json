@@ -1,22 +1,15 @@
 {
   "members": [
     {
-      "id": 1,
-      "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-      "name": "Davi Lobo Gomes Dos Santos",
-      "birth": 979257600000,
+      "avatar_url": "https://source.unsplash.com/collection/3465564/600x500",
+      "name": "Davi Lobo",
+      "email": "davilobo@gmail.com",
+      "birth": 1010793600000,
+      "weight": "65",
+      "height": "184",
+      "blood": "A+",
       "gender": "M",
-      "skills": "Musculação, Crossfit, Luta",
-      "created_at": 1583728526364
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-      "name": "Claúdio",
-      "birth": 979257600000,
-      "gender": "M",
-      "skills": "Musculação, Dança",
-      "created_at": 1583728543148
+      "id": 1
     }
   ],
   "instructors": [
@@ -41,7 +34,7 @@
     {
       "id": 3,
       "avatar_url": "https://images.unsplash.com/photo-1553531580-a000ac8df244?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=282&q=80",
-      "name": "Karla Rocha",
+      "name": "Karla",
       "birth": 922320000000,
       "gender": "F",
       "skills": "Krav Maga",
@@ -50,7 +43,7 @@
     {
       "id": 4,
       "avatar_url": "https://images.unsplash.com/photo-1553531580-a000ac8df244?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=282&q=80",
-      "name": "Karla Rocha",
+      "name": "Karla",
       "birth": 922320000000,
       "gender": "F",
       "skills": "Krav Maga",
@@ -59,7 +52,7 @@
     {
       "id": 5,
       "avatar_url": "https://images.unsplash.com/photo-1553531580-a000ac8df244?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=282&q=80",
-      "name": "Karla Rocha",
+      "name": "Karla",
       "birth": 922320000000,
       "gender": "F",
       "skills": "Krav Maga, Luta",

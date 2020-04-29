@@ -4,13 +4,17 @@
     <div class="_grid">
 
         <div class="section-container">
-            <a href="members/create">Novo membro</a>
+            <div class="actions-toolbar">
+                <a class="button" href="/members/create">Novo</a>
+            </div>
 
             <table class="table-container">
                 <thead>
                     <tr class="titles">
-                        <th>Instrutor</th>
-                        <th>Atendimento</th>
+                        <th>Membro</th>
+                        <th>Peso</th>
+                        <th>Altura</th>
+                        <th>E-Mail</th>
                         <th>Ação</th>
                     </tr>
                 </thead>
@@ -21,7 +25,9 @@
                                 <img class="avatar" src="{{member.avatar_url}}" alt="Instructor Avatar" width="80" height="80"/>
                                 <span class="name">{{member.name}}</span>
                             </td>
-                            <td>{{member.skills}}</td>
+                            <td>{{member.weight}}</td>
+                            <td>{{member.height}}</td>
+                            <td>{{member.email}}</td>
                             <td>
                                 <a class="button" href="/members/{{member.id}}"><span>Ver</span></a>
                             </td>

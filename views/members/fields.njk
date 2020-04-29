@@ -16,8 +16,19 @@
         type="text" 
         class="info" 
         name="name"
-        placeholder="Nome do instrutor"
+        placeholder="Nome do membro"
         value="{{member.name}}"
+    />
+</div>
+
+<div class="item">
+    <label for="memberEmail" class="label">E-mail</label>
+    <input id="memberEmail" 
+        type="text" 
+        class="info" 
+        name="email"
+        placeholder="E-mail do membro"
+        value="{{member.email}}"
     />
 </div>
 
@@ -32,6 +43,43 @@
     />
 </div>
 
+<div class="item">
+    <label for="memberWeight" class="label">Peso (KG)</label>
+    <input 
+        id="memberWeight" 
+        type="number" 
+        class="info"
+        name="weight"
+        value="{{member.weight}}"
+    />
+</div>
+
+<div class="item">
+    <label for="memberHeight" class="label">Altura (CM)</label>
+    <input 
+        id="memberHeight" 
+        type="number" 
+        class="info"
+        name="height"
+        value="{{member.height}}"
+    />
+</div>
+
+<div class="item">
+    <label for="memberBlood" class="label">Tipo sanguíneo</label>
+
+    <select name="blood" id="memberBlood" class="info">
+        <option value="A+" {% if member.blood == "A+" %} selected {% endif %}>A+</option>
+        <option value="A-" {% if member.blood == "A-" %} selected {% endif %}>A-</option>
+        <option value="B+" {% if member.blood == "B+" %} selected {% endif %}>B+</option>
+        <option value="B-" {% if member.blood == "B-" %} selected {% endif %}>B-</option>
+        <option value="AB=" {% if member.blood == "AB+" %} selected {% endif %}>AB+</option>
+        <option value="AB-" {% if member.blood == "AB-" %} selected {% endif %}>AB-</option>
+        <option value="O+" {% if member.blood == "O+" %} selected {% endif %}>O+</option>
+        <option value="O-" {% if member.blood == "O-" %} selected {% endif %}>O-</option>
+    </select>
+</div>
+
 <div class="item -flex">
     <span class="label">Sexo</span>
 
@@ -41,9 +89,9 @@
             type="radio" 
             name="gender"
             value="M"
-           {% if member.gender == 'M' %}
-           checked
-           {% endif %}
+            {% if member.gender == 'M' %}
+            checked
+            {% endif %}
         />
         Masculino
     </label>
@@ -59,15 +107,4 @@
         />
         Feminino
     </label>
-</div>
-
-<div class="item">
-    <label for="memberSkill" class="label">Area de Atuação</label>
-    <input id="memberSkill" 
-        type="text" 
-        class="info" 
-        name="skills"
-        placeholder="Insira as áreas do instrutor"
-        value="{{member.skills}}"
-    />
 </div>

@@ -4,11 +4,11 @@
     <div class="_grid">
         <div class="form-block">
             <div class="image-box">
-                <img src="https://source.unsplash.com/collection/3465564/600x500" alt="Workout Image">
+                <img src="{{member.avatar_url}}" alt="Workout Image">
             </div>
 
             <div class="container">
-                <form class="form-container" method="POST" action="/members?_method=PUT">
+                <form id="form-edit" class="form-container" method="POST" action="/members?_method=PUT">
                     <div class="info-box -form">
                         <div class="content-title">
                             <h3 class="title">Editar informações</h3>
@@ -26,7 +26,7 @@
                     </div>
                 </form>
 
-                <form class="form-container -delete" method="POST" action="/members?_method=DELETE">
+                <form id="form-delete" class="form-container -delete" method="POST" action="/members?_method=DELETE">
                     <input 
                         type="hidden" 
                         name="id" 
@@ -38,4 +38,6 @@
             </div>
         </div>
     </div>
+
+    <script src="/assets/js/deleteConfirm.js"></script>
 {%endblock content%}

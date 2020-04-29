@@ -35,6 +35,7 @@ exports.show = function(req,res) {
 
 };
 
+
 exports.create = function(req, res) {
     return res.render('members/create');
 };
@@ -51,20 +52,15 @@ exports.post = function(req, res) {
         }
     }
 
-    let { avatar_url, name, birth, gender, skills } = req.body;
-
     birth = Date.parse(req.body.birth);
-    const created_at = Date.now();
-    const id = Number(data.members.length + 1);
+    const created_at = Date.now(); 
+
+    const id = data.members.length + 1;
 
     data.members.push({
+        ...req.body,
         id,
-        avatar_url,
-        name,
-        birth,
-        gender,
-        skills,
-        created_at
+        birth
     });
 
     const dataDir = './data';
@@ -73,14 +69,13 @@ exports.post = function(req, res) {
         fs.mkdirSync(dataDir);
     }
 
-
     fs.writeFile("data/data.json", JSON.stringify(data, null, 2), function(err){
 
         if (err) {
             return res.send("Write file error");
         }
 
-        return res.redirect("/members");
+        return res.redirect(`/members/${id}`);
     });
 
 };

@@ -18,6 +18,11 @@
                 </div>
 
                 <div class="item">
+                    <label class="label">E-mail</label>
+                    <span class="info">{{member.email}}</span>
+                </div>
+
+                <div class="item">
                     <label class="label">Idade</label>
                     <span class="info">{{member.age}}</span>
                 </div>
@@ -28,17 +33,24 @@
                 </div>
 
                 <div class="item">
-                    <label class="label">Acompanhamento</label>
-
-                    {% for skill in member.skills %}
-                        <span class="info -highlighted">{{skill}}</span>
-                    {% endfor %}
+                    <label class="label">Peso (KG)</label>
+                    <span class="info">{{member.height}}</span>
                 </div>
 
                 <div class="item">
+                    <label class="label">Altura (CM)</label>
+                    <span class="info">{{member.height}}</span>
+                </div>
+
+                <div class="item">
+                    <label class="label">Tipo Sanguíneo</label>
+                    <span class="info">{{member.blood}}</span>
+                </div>
+
+                {# <div class="item">
                     <label class="label">Desde</label>
                     <span class="info">{{member.created_at}}</span>
-                </div>
+                </div> #}
 
                 <a href="/members/{{member.id}}/edit" class="button"><span>Editar</span></a>
             </div>

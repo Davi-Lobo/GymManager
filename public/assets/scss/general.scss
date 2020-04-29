@@ -41,7 +41,8 @@ a {
     text-decoration: none;
 }
 
-input {
+input,
+select {
     border-radius: 5px;
     border: 2px solid #EAEAEA;
     font-family: 'Roboto';
@@ -59,9 +60,11 @@ input {
     }
 }
 
-input[type="text"],
 input[type="url"],
-input[type="date"] {
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
     width: 100%;
 }
 
@@ -99,4 +102,14 @@ button,
 .section-container {
     background-color: #FFF;
     padding: 40px;
+}
+
+.actions-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+
+    > .button {
+        width: 33.3333%;
+    }
 }
